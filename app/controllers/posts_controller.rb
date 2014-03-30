@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
-
+	def show
+		@post = Post.find(params[:id])
+	end
 	def index
 		#everything here will get run when someone goes to /posts
 		@posts = Post.all
